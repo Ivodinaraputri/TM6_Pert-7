@@ -17,7 +17,7 @@ body{
 
 .menu-mobile a{
     color : #888;
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
     padding: 5px 10px 5px 10px;
@@ -98,14 +98,13 @@ nav ul li a:hover{
     color: orange;
 }
 
-/* section profile */
-
-section#box-profile{
+/* Section Profile */
+section#box-profile {
     margin: 20px;
     display: flex;
     position: relative;
     width: 80%;
-    min-height: 250px;
+    min-height: 200px;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 60px;
@@ -114,18 +113,18 @@ section#box-profile{
     box-shadow: 0 0 7px 0px rgba(136, 136, 136, 0.2);
 }
 
-#box-profile .img-profile{
+#box-profile .img-profile {
     position: relative;
     display: inline-block;
     width: 200px;
     height: 200px;
-    border-radius: 300px;
+    border-radius: 100px;
     float: left;
-    top: 25px;
-    margin-left: 40px;
+    top: 50px;
+    margin-left: 10px;
 }
 
-.img-profile .photo{
+.img-profile .photo {
     height: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -133,61 +132,54 @@ section#box-profile{
     border-radius: 300px;
 }
 
-.description{
-    display: flex;
+.description {
     position: relative;
-    width: 400px;
+    width: 700px;
     display: inline-block;
-    float: left;
-    top: 50px;
-    margin-left: 30px;
+    top: 10px;
+    margin-left: 50px;
     font-family: 'Helvetica', sans-serif;
     border-right: 1px solid #efefef;
 }
 
-.description h1{
-    font-size: 32px;
+.description h1 {
+    font-size: 30px;
     margin-bottom: 14px;
 }
 
-.description p{
+.description p {
     color: #888888;
 }
 
-.description .button{
-    margin-top: 40px;
+.description .button {
+    margin-top: 20px;
 }
 
-.information{
-    display: flex;
+.information {
     position: relative;
     display: inline-block;
-    float: left;
     font-family: 'Helvetica', sans-serif;
-    top: 45px;
-    margin-left: 30px;
+    top: 20px;
 }
 
-.information .data{
+.information .data {
     display: flex;
     width: 100%;
     height: 36px;
 }
 
-.information p.field{
+.information p.field {
     font-weight: 600;
     width: 150px;
     color: #333;
 }
 
-.information .data p{
+.information .data p {
     float: left;
 }
 
-
-/* section form */
-
-section#input-form{
+/* Section Form */
+section#input-form {
     position: relative;
     max-width: 80%;
     margin-left: 10%;
@@ -199,25 +191,24 @@ section#input-form{
     padding: 30px;
 }
 
-
-/* CTO */
-#input-form .form{
+/* Form */
+#input-form .form {
     width: 100%;
     display: grid;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-label{
+label {
     font-family: 'Helvetica', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: black;
     font-weight: 600;
 }
 
-input{
+input {
     font-family: 'Helvetica', 'sans-serif';
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     outline: none;
     border-radius: 3px;
     border: 1px solid #888888;
@@ -226,13 +217,54 @@ input{
     font-size: 14px;
 }
 
-@media(min-width:321px) and (max-width: 400px){
-    section#box-profile{
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        top: 43px;
+        z-index: 99;
+        background: #fff;
+    }
+
+    .menu-mobile {
+        display: inline-block;
+    }
+
+    section#box-profile {
+        flex-direction: column;
+        align-items: center;
         width: 90%;
-        height: 630px;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 30px;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .description {
+        width: 100%;
+        margin: 20px 0;
+        border: none;
+    }
+
+    .information {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .img-profile .photo {
+        margin: 0 auto;
+    }
+
+    section#input-form {
+        width: 90%;
+        margin: 30px auto;
+    }
+}
+@media(min-width:321px) and (max-width: 400px){
+    section#box-profile {
+        width: 100%;
+        margin: 20px 0;
     }
     .menu-mobile{
         top: 20px;
@@ -254,23 +286,19 @@ input{
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .description{
-        padding-left: 0px;
+    .description {
         width: 100%;
-        text-align: center;
-        margin-left: 0;
+        margin: 20px 0;
         border: none;
     }
     .description .button{
         margin-right: 10px;
         margin-left: 10px;
     }
-    .img-profile .photo{
-        left: 35px;
-        position: relative;
+    .img-profile .photo {
+        margin: 0 auto;
     }
-    .information{
-        top: 75px;
-        margin-left: 25px;
-        font-size: 14px;
+    .information {
+        width: 100%;
+        margin: 20px 0;
     }
